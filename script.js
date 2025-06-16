@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await runBiosSequence();
 
         loadingScreen.classList.remove('hidden');
-        await sleep(2800); // Wait for loading bar animation (css is 2.5s)
+        await sleep(5000); // Wait for loading bar animation (css is 4.5s)
 
         loadingScreen.classList.add('hidden');
         desktop.classList.remove('hidden');
