@@ -53,25 +53,25 @@ body {
 .frame-top {
     grid-row: 1;
     grid-column: 1 / -1; /* Span all columns */
-    background: url(./top_frame.png) center/cover no-repeat;
+    background: #d4c6a9 url(./top_frame.png) repeat-x center / auto 100%;
 }
 
 .frame-bottom {
     grid-row: 3;
     grid-column: 1 / -1; /* Span all columns */
-    background: url(./bottom_frame.png) center/cover no-repeat;
+    background: #d4c6a9 url(./bottom_frame.png) repeat-x center / auto 100%;
 }
 
 .frame-left {
     grid-row: 2;
     grid-column: 1;
-    background: url(./left_frame.png) center/cover no-repeat;
+    background: #d4c6a9 url(./left_frame.png) repeat-y center / 100% auto;
 }
 
 .frame-right {
     grid-row: 2;
     grid-column: 3;
-    background: url(./right_frame.png) center/cover no-repeat;
+    background: #d4c6a9 url(./right_frame.png) repeat-y center / 100% auto;
 }
 
 #screen {
