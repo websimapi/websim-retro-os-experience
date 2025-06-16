@@ -63,11 +63,30 @@ body {
     left: 12.5%;
     width: 75%;
     height: 72%;
-    background-color: #008080; /* Classic Windows teal */
+    background-color: #000; /* Default to black for BIOS */
     overflow: hidden;
     box-sizing: border-box;
     border: 2px solid black;
 }
+
+/* BIOS Screen */
+#bios-screen {
+    color: #c0c0c0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.2;
+    overflow-y: hidden;
+}
+
+#bios-text {
+    font-family: 'VT323', monospace;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
 
 /* Loading Screen */
 #loading-screen {
@@ -233,4 +252,3 @@ body {
     z-index: 1000;
     transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
 }
-

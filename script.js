@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const midiWindow = document.getElementById('midi-player-window');
     const music = document.getElementById('music');
     const screen = document.getElementById('screen');
+    const biosScreen = document.getElementById('bios-screen');
+    const biosText = document.getElementById('bios-text');
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -32,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('start-container').classList.add('hidden');
         pcContainer.classList.remove('hidden');
 
+        await runBiosSequence();
+
+        loadingScreen.classList.remove('hidden');
         await sleep(2800); // Wait for loading bar animation (css is 2.5s)
 
         loadingScreen.classList.add('hidden');
@@ -40,6 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
         await sleep(1000); // Pause before mouse moves
 
         automateOS();
+    };
+
+    const runBiosSequence = async () => {
+        biosScreen.classList.remove('hidden');
+        const lines = [
+            'AMIBIOS(C)1999 American Megatrends Inc.',
+            'BIOS Date: 08/15/99 15:30:00',
+            'CPU : Genuine Intel Pentium(r) II Processor @ 450MHz',
+            'Memory Test : 131072K OK',
+            '',
+            'Detecting Primary Master ... SuperDisk 120MB',
+            'Detecting Primary Slave  ... None',
+            'Detecting Secondary Master ... CD-ROM Drive 40X',
+            'Detecting Secondary Slave  ... None',
+            '',
+            'Booting from C:',
+            'Starting Windows...',
+        ];
+
+        for (const line of lines) {
+            biosText.textContent += line + '\n';
+            await sleep(Math.random() * 100 + 80); // Random delay for typing effect
+        }
+
+        await sleep(1500); // Pause to read the text
+        biosScreen.classList.add('hidden');
+        biosText.textContent = ''; // Clear for next time
     };
 
     const automateOS = async () => {
@@ -128,4 +160,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startBtn.addEventListener('click', startExperience);
 });
-
