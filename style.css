@@ -45,9 +45,6 @@ body {
     height: 67.5vmin; /* 4:3 aspect ratio */
     max-width: 1024px;
     max-height: 768px;
-    background-image: url(pc_frame.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 
 .pc-frame {
