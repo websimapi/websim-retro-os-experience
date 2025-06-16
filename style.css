@@ -79,7 +79,7 @@ body {
     font-size: 14px;
     line-height: 1.2;
     overflow-y: hidden;
-    background: #0000A8;
+    background: #000;
 }
 
 #bios-text {
@@ -97,7 +97,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #0000A8;
+    background: #000;
 }
 
 #win-logo {
@@ -119,7 +119,7 @@ body {
 #progress-bar {
     width: 0%;
     height: 100%;
-    background-color: #0000A8;
+    background-color: #008080;
     animation: loading 4.5s linear forwards;
 }
 
