@@ -39,7 +39,7 @@ body {
     display: none !important;
 }
 
-#pc-container {
+#monitor-container {
     position: relative;
     width: 90vmin;
     height: 67.5vmin; /* 4:3 aspect ratio */
@@ -47,7 +47,7 @@ body {
     max-height: 768px;
 }
 
-.pc-frame {
+.monitor-frame {
     position: absolute;
     top: 0;
     left: 0;
@@ -59,10 +59,10 @@ body {
 
 #screen {
     position: absolute;
-    top: 11.5%;
-    left: 12.5%;
-    width: 75%;
-    height: 72%;
+    top: 8%;
+    left: 6%;
+    width: 88%;
+    height: 80%;
     background-color: #000; /* Default to black for BIOS */
     overflow: hidden;
     box-sizing: border-box;

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.getElementById('start-btn');
-    const pcContainer = document.getElementById('pc-container');
+    const monitorContainer = document.getElementById('monitor-container');
     const loadingScreen = document.getElementById('loading-screen');
     const desktop = document.getElementById('desktop');
     const cursor = document.getElementById('cursor');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startExperience = async () => {
         document.getElementById('start-container').classList.add('hidden');
-        pcContainer.classList.remove('hidden');
+        monitorContainer.classList.remove('hidden');
 
         await runBiosSequence();
 
